@@ -26,21 +26,7 @@ Use the [template](https://github.com/alchemycodelab/adv-react-alchemeetme-testi
   - profile name
   - Background Color (stretch)
 - Tests ensure the Profile is displaying properly by testing for:
-  - name
-  - motto
-  - interests heading
-  - avatar
-  - header image
-  - list of user likes
-- (Stretch) You can also write tests that ensures the `user` object received as a prop to the `Home` component has the following shape:
-  - id
-  - name
-  - avatar
-  - header
-  - likes
-  - motto
-  - color
-
+a
 ### Rubric
 
 | Tasks                                                                    | Points |
