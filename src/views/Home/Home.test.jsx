@@ -21,26 +21,23 @@ const user = {
   color: 'Orangered',
 }
 
-test('Should render the user profile', () => {
+test('Should render the user profile', async () => {
   render(<Home user={user} />)
-  //   - name
-  const userName = screen.getByRole('header', { name: /fora/i })
-  //   - motto
-  const userMotto = screen.getByRole('paragraph', { name: /motto/i })
+  const { name, motto } = user
+
+  const userName = await screen.findByRole('heading', { name })
+
   //   - interests heading
-  const userInterestsHeading = screen.getByRole('header', { name: /interests/i })
-  //   - avatar
-  const userAvatar = screen.getByRole('img', { name: /avatar/i })
-  //   - header image
-  const userHeaderImage = screen.getByRole('img', { name: /header/i })
+  // const userInterestsHeading =
+
   //   - list of user likes
   // const userListOfLikes = screen.getAllByRole('listitem', {})
 
   expect(userName).toBeInTheDocument()
-  expect(userMotto).toBeInTheDocument()
-  expect(userInterestsHeading).toBeInTheDocument()
-  expect(userAvatar).toBeInTheDocument()
-  expect(userHeaderImage).toBeInTheDocument()
+  expect(screen.getByText(motto)).toBeInTheDocument()
+  expect(screen.getByRole('heading', { name: /interests/i })).toBeInTheDocument()
+  expect(screen.getByRole('img', { name: /avatar/i })).toBeInTheDocument()
+  expect(screen.getByRole('img', { name: /header/i })).toBeInTheDocument()
   // expect(userListOfLikes.length).toEqual(7)
 })
 
