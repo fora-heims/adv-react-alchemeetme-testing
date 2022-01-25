@@ -35,11 +35,14 @@ test('Should render the user profile', async () => {
   expect(screen.getAllByRole('listitem').length).toEqual(likes.length)
 })
 
-// - (Stretch) You can also write tests that ensures the `user` object received as a prop to the `Home` component has the following shape:
-//   - id
-//   - name
-//   - avatar
-//   - header
-//   - likes
-//   - motto
-//   - color
+test('The user object passed into the Home component as a prop has the correct structure', async () => {
+  render(<Home user={user} />)
+
+  expect(user).toHaveProperty('id')
+  expect(user).toHaveProperty('name')
+  expect(user).toHaveProperty('avatar')
+  expect(user).toHaveProperty('header')
+  expect(user).toHaveProperty('likes')
+  expect(user).toHaveProperty('motto')
+  expect(user).toHaveProperty('color')
+})
