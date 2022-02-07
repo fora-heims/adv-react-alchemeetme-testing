@@ -26,39 +26,37 @@ Use the [template](https://github.com/alchemycodelab/adv-react-alchemeetme-testi
   - profile name
   - Background Color (stretch)
 - Tests ensure the Profile is displaying properly by testing for:
-  - name
-  - motto
-  - interests heading
-  - avatar
-  - header image
-  - list of user likes
-- (Stretch) You can also write tests that ensures the `user` object received as a prop to the `Home` component has the following shape:
-  - id
-  - name
-  - avatar
-  - header
-  - likes
-  - motto
-  - color
+  a - name - motto - interests heading - avatar - header image - list of user likes
+  - (Stretch) You can also write tests that ensures the `user` object received as a prop to the `Home` component has the following shape:
+    - id
+    - name
+    - avatar
+    - header
+    - likes
+    - motto
+    - color
 
 ### Rubric
 
-| Tasks                                                                    | Points |
-| :----------------------------------------------------------------------- | -----: |
-| Tests wrote for user profile |      4 |
-| Tests wrote for the header        |      4 |
-| Successful netlify deployment                      |      2 |
+| Tasks                         | Points |
+| :---------------------------- | -----: |
+| Tests wrote for user profile  |      4 |
+| Tests wrote for the header    |      4 |
+| Successful netlify deployment |      2 |
 
 ---
+
 ### Optional
+
 The api sending my profile information is from a supabase db (`'src/services/user.js'`), and you can see my credentials in the `.env` file. This is def a bad practice, but a necessary evil. You can replace my supabase url and key in the `.env` file with your own credentials to display your own data.
 
 You will need to create a new `users` table in supabase with fields for:
-  - name
-  - avatar
-  - header
-  - likes (this field requires the array option in supabase)
-  - motto
-  - color
+
+- name
+- avatar
+- header
+- likes (this field requires the array option in supabase)
+- motto
+- color
 
 These fields are currently required for display with no code changes. Feel free to add any more fields you desire, and make the required code changes to display the field.
